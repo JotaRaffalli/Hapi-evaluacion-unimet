@@ -36,6 +36,15 @@ server.route({
   	}
 });
 
+server.route({
+    method: 'GET',
+    path:'/main', 
+    handler: {
+      view: 'main'
+    }
+});
+
+
 // Start the server
 server.start(function(err) {  
   if (err) {
