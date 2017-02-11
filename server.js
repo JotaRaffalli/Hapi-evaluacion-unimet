@@ -1,10 +1,10 @@
 'use strict';
-
+// Dependencias 
 const Hapi = require('hapi');
 const Vision = require('vision')
 const Ejs = require('ejs');
 
-// Create a server with a host and port
+// Crea el servidor 
 const server = new Hapi.Server();
 server.connection({ 
     host: 'localhost', 
@@ -17,7 +17,7 @@ server.register(Vision, function (err) {
     console.log('Cannot register vision')
   }
 
-  // configure template support   
+  // Configura el motor de renderizado 
   server.views({
     engines: {
       html: Ejs
@@ -27,12 +27,20 @@ server.register(Vision, function (err) {
 })
 
 
-// Add the route
+// Rutas
 server.route({
     method: 'GET',
     path:'/test', 
   	handler: {
   	  view: 'index'
+  	}
+});
+
+server.route({
+    method: 'GET',
+    path:'/sign-in', 
+  	handler: {
+  	  view: 'sign-in'
   	}
 });
 
@@ -45,7 +53,7 @@ server.route({
 });
 
 
-// Start the server
+// Levanta el servidor
 server.start(function(err) {  
   if (err) {
     throw err
