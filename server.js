@@ -1,17 +1,19 @@
 'use strict';
-// Dependencias 
+// Dependencias ------------------------------------------------------------------------ 
 const Hapi = require('hapi');
+const Routes = require('./lib/routes');
 const Vision = require('vision')
 const Ejs = require('ejs');
+const Inert = require('inert');
 
-// Crea el servidor 
+// Crea el servidor --------------------------------------------------------------------
 const server = new Hapi.Server();
 server.connection({ 
     host: 'localhost', 
     port: 3000
 });
 
-//Plugins
+//Plugins ------------------------------------------------------------------------------
 server.register(Vision, function (err) {  
   if (err) {
     console.log('Cannot register vision')
@@ -26,8 +28,11 @@ server.register(Vision, function (err) {
   })
 })
 
+//Inicializa las Rutas ------------------------------------------------------------------
 
-// Rutas
+server.route(Routes);
+
+// Rutas de prueba : Ver routes.js
 server.route({
     method: 'GET',
     path:'/test', 
@@ -54,8 +59,24 @@ server.route({
     }
 });
 
+// Archivos Estaticos
+server.register(require('inert'), function(err) {   
+   if (err) {throw err;}
 
-// Levanta el servidor
+   server.route({   
+     method : 'GET', path : '/public/{path*}', 
+     handler : {      
+       directory : {        
+       path : './public',       
+       listing : false,       
+       index : false      
+       }    
+    }
+  
+   });  
+
+});
+// Levanta el servidor -------------------------------------------------------------------
 server.start(function(err) {  
   if (err) {
     throw err
