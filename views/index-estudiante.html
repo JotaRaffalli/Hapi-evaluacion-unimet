@@ -3,28 +3,29 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
 
-    <!-- Meta -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Materia: Sistemas de Información. Proyecto: Control de evaluaciones al docente.
+    <meta name="description" content="Materia: Sistemas de Información. Proyecto: Control de evaluaciones al docente. 
     Versión: 1.00. Integrantes: José Raffalli, Rocco Tarantino, Rafael Concha y Victoria Masiero.">
 
     <!-- Responsive -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
      <!-- Titulo -->
-    <title> Evaluacion Unimet | Universidad Metropolitana</title>
+    <title>Estudiante Evaluacion Unimet | Universidad Metropolitana</title>
 
     <!-- Roboto -->
-     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet'
-    type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
     <!-- Favicon -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="../public/images/favicon.png" type="images/x-icon">
+
+    <!-- Signup.css Custom -->
+    <link rel="stylesheet" href="../public/styles/signup.css" >
 
     <!-- Material Design -->
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
-
+    
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -113,35 +114,13 @@
     </header>
 
     <div class="mdl-layout__drawer">
-    <br>
-       <center><header>MENU</header></center>
+        <span class="mdl-layout-title">MENU</span>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link mdl-navigation__link--current" href="index.html">
-                <i class="material-icons" role="presentation">dashboard</i>
-                Dashboard
-            </a>
-            <a class="mdl-navigation__link" href="forms.html">
-                <i class="material-icons" role="presentation">person</i>
-                Cuenta
-            </a>
-            <a class="mdl-navigation__link" href="maps.html">
-                <i class="material-icons" role="presentation">map</i>
-                Mapas
-            </a>
-            <a class="mdl-navigation__link" href="ui.html">
-                <i class="material-icons">view_comfy</i>
-                Elementos
-            </a>
-
-            <div class="mdl-layout-spacer"></div>
-            <a class="mdl-navigation__link" href="https://github.com/">
-                <i class="material-icons" role="presentation">link</i>
-                GitHub
-            </a>
+          <a class="mdl-navigation__link" href="/">Home</a>
         </nav>
-    </div>
+      </div>
 
-    <main class="mdl-layout__content">
+    <main class="mdl-layout__content" align="center">
 
         <div class="mdl-grid mdl-grid--no-spacing">
 
@@ -149,7 +128,7 @@
 
                 <!-- Tabla -->
                 <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone ">
-                <h4>Materias</h4>
+                <h4>Materias en Curso</h4>
                     <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp projects-table" align="center">
                         <thead>
                         <tr>
@@ -176,7 +155,7 @@
                             <td class="mdl-data-table__cell--non-numeric">Christian Guillen</td>
                             <td class="mdl-data-table__cell--non-numeric"><a href="#">Evaluar</a></td>
                         </tr>
-                        <tr class="is-selected">
+                        <tr>
                             <td class="mdl-data-table__cell--non-numeric">Administración de Bases de Datos</td>
                             <td class="mdl-data-table__cell--non-numeric">
                                 <span class="label label--mini background-color--primary">FPTSP02</span>
@@ -197,27 +176,6 @@
                 </div>
             </div>
 
-
-                <!-- Para Hacer -->
-                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp todo">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Para Hacer</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <ul class="mdl-list">
-
-                            </ul>
-                        </div>
-                        <div class="mdl-card__actions">
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect">Remover</button>
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-shadow--8dp mdl-button--colored ">
-                                <i class="material-icons mdl-js-ripple-effect">add</i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
@@ -228,6 +186,7 @@
 <script src="../public/js/getmdl-select.min.js"></script>
 <script src="../public/js/material.js"></script>
 <script src="../public/js/table.js"></script>
+<script src="../public/js/dependencies/jquery.min.js"></script>
 
 <!-- endinject -->
 
