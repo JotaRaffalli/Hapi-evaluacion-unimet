@@ -9,8 +9,10 @@ const Inert = require('inert');
 // Crea el servidor --------------------------------------------------------------------
 const server = new Hapi.Server();
 server.connection({ 
+
     host: 'localhost',
     port: 3000
+
 });
 
 //Plugins ------------------------------------------------------------------------------
