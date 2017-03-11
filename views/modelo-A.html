@@ -120,62 +120,300 @@
         </nav>
     </div>
 
-    <main class="mdl-layout__content" align="center">
-
-        <div class="mdl-grid mdl-grid--no-spacing">
-
     
-      <div class="container">
-          <div class="row s12">
-              
 
-              <div class="col md2">
-                  
-                  <label class="mdl-radio mdl-js-radio" for="option1">
-            <input type="radio" id="option1" name="gender" class="mdl-radio__button" checked>
-            <span class="mdl-radio__label">1</span>
-         </label>
-
-              </div>
-              
-      
-      
-          <div class="col md2">
-                  
-                  <label class="mdl-radio mdl-js-radio" for="option1">
-            <input type="radio" id="option1" name="gender" class="mdl-radio__button" checked>
-            <span class="mdl-radio__label">1</span>
-         </label>
-
-              </div>
-      
-         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option3">
-            <input type="radio" id="option3" name="gender" class="mdl-radio__button" >
-            <span class="mdl-radio__label">3</span>
-         </label>
-      
-         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option4">
-            <input type="radio" id="option4" name="gender" class="mdl-radio__button" >
-            <span class="mdl-radio__label">4</span>
-         </label>
-     
-         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option5">
-            <input type="radio" id="option5" name="gender" class="mdl-radio__button" >
-            <span class="mdl-radio__label">5</span>
-         </label>
-
-
-
-
-          </div>
-
-
-      </div>
-       
-         
-     
+    <main class="mdl-layout__content" >
         
+        <h3 align="center" style="color: green">Evaluación Docente </h3>
+
+        <div id="ModeloA" style="padding: 20px">
+            
+            <!-- Parte 1 -->
+            <table><tr>
+            <td><h5 style="color: green;"><strong>Identificación Institucional</strong></h5></td>
+            <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="showhide1()" id="1"><i class="material-icons">add</i></button></td></tr></table>
+            
+            <div id="seccion1" style="display: none">
+            <h6><strong>El Profesor conoce a la Unimet, su misión, sus valores y los practica mostrando sentido de pertenencia cuando:</strong></h6>
+            
+            <div class="mdl-grid mdl-grid--no-spacing">
+            <div class="container">
+                <pre><label><big>  -   Muestra disposición para entender y satisfacer necesidades de la dependencia                        </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Practica y promueve la honestidad, el respeto, la excelencia y la responsabilidad                   </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Conoce, da a conocer y respeta las normas y reglamentos                                             </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Respeta los compromisos y las normas establecidas en los grupos o equipos de trabajo                </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Participa en Comisiones o Asociaciones, institucionales o de la dependencia                         </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Cuida su ambiente de trabajo                                                                        </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Cuida su aspecto personal                                                                           </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Acepta el proceso de evaluación como un medio para identificar las oportunidades de mejora          </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Representa a la Universidad con sentido de pertenencia                                              </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Internaliza con sentido de pertenencia políticas y objetivos de la institución                      </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+            </div>
+            </div>
+            </div>
+
+            <!-- Parte 2 -->
+            <table><tr>
+            <td><h5 style="color: green;"><strong>Manejo de Situaciones</strong></h5></td>
+            <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="showhide2()" id="2"><i class="material-icons">add</i></button></td></tr></table>
+
+            <div id="seccion2" style="display: none">
+            <h6><strong>El Profesor evidencia capacidad para analizar, manejar y evaluar situaciones cuando:</strong></h6>
+            
+            <div class="mdl-grid mdl-grid--no-spacing">
+            <div class="container">
+                <pre><label><big>  -   Toma decisiones oportunas                                                                           </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Se maneja con ecuanimidad, prudencia, cortesía y discreción en situaciones de conflicto             </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Demuestra habilidad para expresarse en forma oral y escrita                                         </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Demuestra capacidad para verificar la congruencia entre lo que se dice y lo que se hace             </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Es oportuno en sus intervenciones                                                                   </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Manifiesta y demuestra capacidad de negociación                                                     </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Se comunica de manera cortés y respetuosa con secretarias, colegas, supervisados y alumnos          </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Es discreto en la solución de conflictos                                                            </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   En situaciones de conflicto respeta los canales de autoridad                                        </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+            </div>
+            </div>
+            </div>
+
+            <!-- Parte 3 -->
+            <table><tr>
+            <td><h5 style="color: green;"><strong>Participación y Trabajo en Equipo</strong></h5></td>
+            <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="showhide3()" id="1"><i class="material-icons">add</i></button></td></tr></table>
+            
+            <div id="seccion3" style="display: none">
+            <h6><strong>El Profesor muestra habilidad en la participación dentro de su equipo de trabajo, cuando:</strong></h6>
+            
+            <div class="mdl-grid mdl-grid--no-spacing">
+            <div class="container">
+                <pre><label><big>  -   Asiste a las reuniones de equipo y está dispuesto a ofrecer conocimiento, información y 
+      experticia para el logro de objetivos comunes                                                       </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Comparte con colegas sus experiencias docentes                                                      </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Aporta conocimientos valiosos sobre la materia que dicta, a través de la coordinación de                          
+      la misma                                                                                            </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Es eficiente en la planificación de tareas o actividades relacionadas con su equipo de trabajo      </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Es colaborador, conciliador y sabe escuchar                                                         </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Evidencia interés por lograr acuerdos y consensos con el grupo                                      </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Participa como jurado en trabajos y/o tesis de grado                                                </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Muestra disposición a actuar como tutor en trabajos y/o tesis de grado                              </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+            </div>
+            </div>
+            </div>
+
+            <!-- Parte 4 -->
+            <table><tr>
+            <td><h5 style="color: green;"><strong>Capacidad para actuar como facilitador en el proceso de enseñanza-aprendizaje</strong></h5></td>
+            <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="showhide4()" id="1"><i class="material-icons">add</i></button></td></tr></table>
+            
+            <div id="seccion4" style="display: none">
+            <h6><strong>El Profesor muestra capacidad para optimizar el proceso enseñanza-aprendizaje cuando:</strong></h6>
+            
+            <div class="mdl-grid mdl-grid--no-spacing">
+            <div class="container">
+                <pre><label><big>  -   Conoce la materia a profundidad                                                                     </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Analiza con el grupo de estudiantes, al inicio del curso, el programa de la materia, haciendo 
+      énfasis en los objetivos, contenidos, actividades y formas de evaluación del mismo                  </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Expone los conceptos con claridad y precisión y promueve que comprendan el por qué de las cosas     </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Promueve el pensamiento crítico y utiliza técnicas que favorecen el debate, la discusión y las 
+      propuestas de solución                                                                              </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Encarga trabajos que desarrollan la capacidad de identificar y solucionar problemas                 </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+            </div>
+            </div>
+            </div>
+
+            <!-- Parte 5 -->
+            <table><tr>
+            <td><h5 style="color: green;"><strong>Actualización y Capacitación</strong></h5></td>
+            <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="showhide5()" id="1"><i class="material-icons">add</i></button></td></tr></table>
+            
+            <div id="seccion5" style="display: none">
+            <h6><strong>El Profesor demuestra interés en actualizarse y desarrollarse cuando:</strong></h6>
+            
+            <div class="mdl-grid mdl-grid--no-spacing">
+            <div class="container">
+                <pre><label><big>  -   Se mantiene activo en el área de su competencia a nivel teórico y práctico, suministrando 
+      información vigente a sus alumnos                                                                   </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Intercambia, expone o exhibe ideas novedosas sobre su materia                                       </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Participa en programas de actualización de la Unimet                                                </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Participa en programas de investigación de la Unimet                                                </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Participa en otros programas de actualización profesional, acordes con las metas de la 
+      dependencia o de la Universidad                                                                     </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Organiza y dicta algún seminario o taller dentro de su dependencia o a nivel institucional          </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Diseña algún curso o parte de uno, integrando actividades de aprendizaje que requieren 
+      el uso de la tecnología                                                                             </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+            </div>
+            </div>
+            </div>
+
+            <!-- Parte 6 -->
+            <table><tr>
+            <td><h5 style="color: green;"><strong>Autocrítica</strong></h5></td>
+            <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="showhide6()" id="1"><i class="material-icons">add</i></button></td></tr></table>
+            
+            <div id="seccion6" style="display: none">
+            <h6><strong>El Profesor muestra capacidad para analizar, reflexionar, innovar, mejorar y hasta cuestionar su propia actitud y gestión, cuando:</strong></h6>
+            
+            <div class="mdl-grid mdl-grid--no-spacing">
+            <div class="container">
+
+                <pre><label><big>  -   Muestra apertura al diálogo y a formas de pensar diferentes a la suya                               </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Es exigente consigo mismo                                                                           </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Demuestra aceptar observaciones externas, buscando siempre optimizar su rol                         </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+            </div>
+            </div>
+            </div>
+
+            <!-- Parte 7 -->
+            <table><tr>
+            <td><h5 style="color: green;"><strong>Motivación al Logro</strong></h5></td>
+            <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="showhide7()" id="1"><i class="material-icons">add</i></button></td></tr></table>
+            
+            <div id="seccion7" style="display: none">
+            <h6><strong>El Profesor manifiesta interés por trabajar, superando stándares de excelencia, cuando:</strong></h6>
+            
+            <div class="mdl-grid mdl-grid--no-spacing">
+            <div class="container">
+
+                <pre><label><big>  -   Muestra interés y satisfacción en su trabajo                                                        </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Promueve actividades innovadoras y de cambio para la dependencia, buscando siempre 
+      las oportunidades de mejora                                                                         </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Es exigente en el logro de sus objetivos                                                            </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+            </div>
+            </div>
+            </div>
+
+            <!-- Parte 8 -->
+            <table><tr>
+            <td><h5 style="color: green;"><strong>Responsabilidad y Compromiso</strong></h5></td>
+            <td><button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="showhide8()" id="1"><i class="material-icons">add</i></button></td></tr></table>
+            
+            <div id="seccion8" style="display: none">
+            <h6><strong>El Profesor es responsable y exhibe un alto nivel de compromiso con su trabajo, cuando:</strong></h6>
+            
+            <div class="mdl-grid mdl-grid--no-spacing">
+            <div class="container">
+
+                <pre><label><big>  -   Asiste a todas sus sesiones, cumple con el tiempo reglamentario de clase                            </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Evidencia compromiso con estudiantes y colegas                                                      </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Evidencia compromiso con la administración del curso cumpliendo con el programa 
+      establecido para la materia                                                                         </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Entrega puntualmente las actas, informes, encuestas, y recaudos solicitados por
+      sus superiores o coordinadores                                                                      </big><input oninput="maxLengthCheck(this)" onkeyup= "maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Es puntual en todas las actividades de clase, reuniones, etc.                                       </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+                <pre><label><big>  -   Está disponible en el período intersemestral                                                        </big><input oninput="maxLengthCheck(this)" onkeyup="maxnumber(this)" type = "number" maxlength = "1" min = "1" max = "5" />
+                </label></pre>
+
+            </div>
+            </div>
+            </div>
+
+            <div align="center">
+                <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-blue">Enviar</button>  
+            </div>
+            
+
+
         </div>
+       
 
     </main>
 </div>
@@ -185,6 +423,51 @@
 <script src="../public/js/material.js"></script>
 <script src="../public/js/table.js"></script>
 <script src="../public/js/dependencies/jquery.min.js"></script>
+
+<script>
+  function maxLengthCheck(object)
+  {
+    if (object.value.length > object.maxLength)
+      object.value = object.value.slice(0, object.maxLength)
+  }
+
+  function maxnumber (input) {
+    var regex = /[^1-5]/;
+    input.value = input.value.replace (regex, "5");
+  }
+
+  function showhide1 (){
+    document.getElementById('seccion1').style.display='inline';
+  }
+
+  function showhide2 (){
+    document.getElementById('seccion2').style.display='inline';
+  }
+
+  function showhide3 (){
+    document.getElementById('seccion3').style.display='inline';
+  }
+
+  function showhide4 (){
+    document.getElementById('seccion4').style.display='inline';
+  }
+
+  function showhide5 (){
+    document.getElementById('seccion5').style.display='inline';
+  }
+
+  function showhide6 (){
+    document.getElementById('seccion6').style.display='inline';
+  }
+
+  function showhide7 (){
+    document.getElementById('seccion7').style.display='inline';
+  }
+
+  function showhide8 (){
+    document.getElementById('seccion8').style.display='inline';
+  }
+</script>
 
 <!-- endinject -->
 
