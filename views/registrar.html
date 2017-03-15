@@ -100,6 +100,10 @@
                   <label class="mdl-textfield__label" for="Apellido">Apellido</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                  <input ng-model="cedula" class="mdl-textfield__input" type="text" id="Cedula" />
+                  <label class="mdl-textfield__label" for="Cedula">Cedula</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
                   <input ng-model="signupForm.password" class="mdl-textfield__input" type="password" id="Contraseña" />
                   <label class="mdl-textfield__label" for="Contraseña">Contraseña</label>
                 </div>
@@ -153,6 +157,7 @@
       apellido: $scope.signupForm.title,
       email: $scope.signupForm.email,
       carnet: $scope.signupForm.carnet,
+      cedula: $scope.cedula,
       contraseña: $scope.signupForm.password,
       rol : $scope.rol
     })
