@@ -33,7 +33,7 @@
 </head>
 
 <!-- Body -->
-<body>
+<body ng-app="ModuloLogin" ng-controller="ControladorLogin">
 
     <!-- Barra de navegación -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -76,18 +76,19 @@
                   </h2>
                 </div>
                 <div class="p-l-20 p-r-20 p-b-20">
-                  <form action="#">
+                  
+                  <form ng-submit="BusquedaUsu()">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-                      <input class="mdl-textfield__input" type="email" id="email" />
+                      <input class="mdl-textfield__input" type="email" id="email" ng-model="Login.Correo"/>
                       <label class="mdl-textfield__label" for="email">Correo</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-                      <input class="mdl-textfield__input" type="password" id="contraseña" />
+                      <input class="mdl-textfield__input" type="password" id="contraseña" ng-model="Login.Clave"/>
                       <label class="mdl-textfield__label" for="contraseña">Contraseña</label>
                     </div>
 
                     <div class="m-t-20">
-                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-blue">
+                    <button type="button"  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-blue">
                       Entrar
                     </button>
                     <a href="/registrar" class="mdl-button mdl-js-button mdl-js-ripple-effect">
@@ -109,6 +110,36 @@
     </div>
 
 
+ <!-- Angular App-->
+    <script>
+      angular.module('ModuloLogin', []);
+      angular.module('ModuloLogin').controller('ControladorLogin', ['$scope','$http', function($scope, $http){
+
+  $scope.BusquedaUsu = function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
+
+    console.log("entro");
+
+
+    $http.post('/Login-busqueda', {
+      Correo: $scope.Login.Correo,
+      Clave: $scope.Login.Clave
+    })
+    .then( function onSuccess (){
+
+    console.log("exito al enviar");
+    //window.location = '/registro-exitoso.html';    
+
+    })
+    .catch(function onError (error){
+      console.log("error");
+    })
+
+
+
+  }
+}]);
+    </script>
+    
 
     <!-- Jquery -->
     <script src="../public/js/dependencies/jquery.min.js"></script>
