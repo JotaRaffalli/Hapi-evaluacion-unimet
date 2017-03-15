@@ -143,9 +143,11 @@
       angular.module('ModuloDeRegistro', []);
       angular.module('ModuloDeRegistro').controller('ControladorDeRegistro', ['$scope','$http', function($scope, $http){
 
-  $scope.submitRegistrar= function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
+  $scope.submitRegistrar = function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
 
-    
+    console.log("entro");
+
+
     $http.post('/registrar-nuevo', {
       nombre: $scope.signupForm.name,
       apellido: $scope.signupForm.title,
@@ -160,9 +162,8 @@
     //window.location = '/registro-exitoso.html';    
 
     })
-    .catch(function 
-      (sailsResponse){
-      alert(sailsResponse);
+    .catch(function onError (error){
+      console.log("error");
     })
 
 
