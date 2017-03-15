@@ -5,13 +5,14 @@ const Routes = require('./lib/routes');
 const Vision = require('vision')
 const Ejs = require('ejs');
 const Inert = require('inert');
+const models = require('./lib/modelos');
 
 // Crea el servidor --------------------------------------------------------------------
 const server = new Hapi.Server();
 server.connection({
 
-    host: 'localhost',
-    port: 3000
+    host: process.env.IP,
+    port: process.env.PORT
 
 });
 
@@ -35,6 +36,12 @@ server.register(Vision, function (err) {
 server.route(Routes);
 
 
+// sincronizacion de los modelos
+
+ models.sequelize.sync().then(function(){
+        console.log('Updated Database');
+    });
+    
 
 // Archivos Estaticos
 server.register(require('inert'), function(err) {
