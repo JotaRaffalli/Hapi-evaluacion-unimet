@@ -30,6 +30,10 @@
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!-- Angular -->
+    <script src="../public/js/dependencies/angular.js"></script>
+
+
 </head>
 
 <!-- Body -->
@@ -88,7 +92,7 @@
                     </div>
 
                     <div class="m-t-20">
-                    <button type="button"  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-blue">
+                    <button type="submit"  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-blue">
                       Entrar
                     </button>
                     <a href="/registrar" class="mdl-button mdl-js-button mdl-js-ripple-effect">
@@ -117,7 +121,7 @@
 
   $scope.BusquedaUsu = function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
 
-    console.log("entro");
+    
 
 
     $http.post('/Login-busqueda', {
