@@ -109,9 +109,9 @@
                 </div>
                 <select ng-model="rol" style="padding-top: 10px; padding-bottom: 20px;" class="browser-default">
                   <option value="" disabled selected>Selecciona tu rol</option>
-                  <option value="Estudiante">Estudiante</option>
-                  <option value="Profesor">Profesor</option>
-                  <option value="Administrador">Administrador</option>
+                  <option value="1">Estudiante</option>
+                  <option value="2">Profesor</option>
+                  <option value="3">Administrador</option>
                 </select>
                 <!-- btnRegistrar -->
                 <div class="m-t-20">
@@ -159,7 +159,8 @@
     window.location = '/registro-exitoso.html';    
 
     })
-    .catch(function onError(sailsResponse){
+    .catch(function 
+      (sailsResponse){
       alert(sailsResponse);
     })
 
