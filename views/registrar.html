@@ -115,7 +115,6 @@
                   <option value="" disabled selected>Selecciona tu rol</option>
                   <option value="1">Estudiante</option>
                   <option value="2">Profesor</option>
-                  <option value="3">Administrador</option>
                 </select>
                 <!-- btnRegistrar -->
                 <div class="m-t-20">
@@ -147,6 +146,7 @@
       angular.module('ModuloDeRegistro', []);
       angular.module('ModuloDeRegistro').controller('ControladorDeRegistro', ['$scope','$http', function($scope, $http){
 
+        alert('epa');
   $scope.submitRegistrar = function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
 
     console.log("entro");
@@ -158,7 +158,7 @@
       email: $scope.signupForm.email,
       carnet: $scope.signupForm.carnet,
       cedula: $scope.cedula,
-      contraseña: $scope.signupForm.password,
+      clave: $scope.signupForm.password,
       rol : $scope.rol
     })
     .then( function onSuccess (){
