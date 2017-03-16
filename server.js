@@ -24,9 +24,7 @@ server.register(Vision, function (err) {
 
   // Configura el motor de renderizado
   server.views({
-    engines: {
-      html: Ejs
-    },
+    engines: { ejs: require('ejs') },
     path: __dirname+'/views'
   })
 })
