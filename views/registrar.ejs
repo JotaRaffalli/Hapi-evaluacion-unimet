@@ -147,7 +147,7 @@
       angular.module('ModuloDeRegistro', []);
       angular.module('ModuloDeRegistro').controller('ControladorDeRegistro', ['$scope','$http', function($scope, $http){
 
-        alert('epa');
+      
   $scope.submitRegistrar = function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
 
     console.log("entro");
@@ -165,7 +165,7 @@
     .then( function onSuccess (){
 
     console.log("exito al enviar");
-    //window.location = '/registro-exitoso.html';    
+    window.location = '/registro-exitoso.html';    
 
     })
     .catch(function onError (error){

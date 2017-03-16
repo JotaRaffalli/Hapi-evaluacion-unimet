@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Materia: Sistemas de Información. Proyecto: Control de evaluaciones al docente. 
+    Versión: 1.00. Integrantes: José Raffalli, Rocco Tarantino, Rafael Concha y Victoria Masiero.">
+
+    <!-- Responsive -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+     <!-- Titulo -->
+    <title>Exito | Universidad Metropolitana</title>
+
+    <!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../public/images/favicon.png" type="images/x-icon">
+
+    <!-- Signup.css Custom -->
+    <link rel="stylesheet" href="../public/styles/signup.css" >
+
+    <!-- Signup.css Custom -->
+    <link rel="stylesheet" href="../public/styles/registrar.css" >
+
+    <!-- Material Design -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+    
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Angular -->
+    <script src="../public/js/dependencies/angular.js"></script>
+
+
+</head>
+
+<!-- Body -->
+<body ng-app="ModuloDeRegistro" ng-controller="ControladorDeRegistro">
+
+    <!-- Barra de navegación -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Evaluaciones Unimet</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="http://www.unimet.edu.ve/">Universidad Metropolitana</a>
+            <a class="mdl-navigation__link" href="http://espaciovirtual.unimet.edu.ve/login/index.php">Espacio Virtual</a>
+            <a class="mdl-navigation__link" href="http://sirius.unimet.edu.ve/irj/portal">Sirius</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Evaluaciones Unimet</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="/">Home</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div style="padding-top: 60px;" align="center" class="page-content">
+            
+
+                
+                <!-- Wide card with share menu button -->
+                <style>
+                .demo-card-wide.mdl-card {
+
+                  width: 550px;
+                }
+                .demo-card-wide > .mdl-card__title {
+                  color: #fff;
+                  height: 200px;
+                  background: url('../public/images/success.png') center / cover;
+                }
+                .demo-card-wide > .mdl-card__menu {
+                  color: #fff;
+                }
+                </style>
+
+                <div   class="demo-card-wide mdl-card mdl-shadow--2dp">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Bienvenido!</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                    Todo listo ya puedes empezar a disfrutar del sistema de Evaluaiones Unimet
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <a href="/" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                      Inciar Sesion
+                    </a>
+                  </div>
+                </div>
+
+
+
+        </div>
+      </main>
+    </div>
+</body>
+</html>

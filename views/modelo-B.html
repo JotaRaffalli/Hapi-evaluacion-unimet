@@ -32,7 +32,7 @@
 
 
 </head>
-<body>
+<body ng-app="ModuloDeModeloB" ng-controller="ControladorDeModeloB" >
 
 <!-- Barra de Navegación -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
@@ -275,7 +275,7 @@
       </td>
       <td>
         <form action="">
-        <input type="radio" name="11 value="1">
+        <input type="radio" name="11" value="1">
         <input type="radio" name="11" value="2">
         <input type="radio" name="11" value="3">
         <input type="radio" name="11" value="4">
@@ -392,7 +392,7 @@
     </div>
     <br>
 <label><b>¡Enviar!</b></label>
-<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="enviar()">
+<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" ng-click = "submitEnviar()" ">
   <i class="material-icons">mood</i>
 </button>
 
@@ -437,6 +437,51 @@ for (var i=0; i<chck.length; i++){
 <script src="../public/js/material.js"></script>
 <script src="../public/js/table.js"></script>
 <script src="../public/js/dependencies/jquery.min.js"></script>
+
+<script>
+
+
+ 
+
+  angular.module('ModuloDeModeloB', []);
+  angular.module('ModuloDeModeloB').controller('ControladorDeModeloB', ['$scope','$http', function($scope, $http){
+
+      
+  $scope.submitEnviar = function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
+
+    console.log("entro");
+
+    var r13 = $('input[name="13"]:checked').val();
+    var r14 = $('input[name="14"]:checked').val();
+    var r15 = $('input[name="15"]:checked').val();
+    var r16 = $('input[name="16"]:checked').val();
+    var r17 = $('input[name="17"]:checked').val();
+
+    $http.post('/enviar-fB', {
+      nombre: $scope.signupForm.name,
+      apellido: $scope.signupForm.title,
+      email: $scope.signupForm.email,
+      carnet: $scope.signupForm.carnet,
+      cedula: $scope.cedula,
+      clave: $scope.signupForm.password,
+      rol : $scope.rol
+    })
+    .then( function onSuccess (){
+
+    console.log("exito al enviar");
+    window.location = '/registro-exitoso.html';    
+
+    })
+    .catch(function onError (error){
+      console.log("error");
+    })
+
+
+
+  }
+}]);
+
+</script>
 
 <!-- endinject -->
 
