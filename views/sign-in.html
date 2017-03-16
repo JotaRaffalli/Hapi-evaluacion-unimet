@@ -122,7 +122,7 @@
   $scope.BusquedaUsu = function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
 
     
-
+    console.log('entrando a busqueda');
 
     $http.post('/Login-busqueda', {
       Correo: $scope.Login.Correo,
