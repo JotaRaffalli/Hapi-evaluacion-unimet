@@ -134,43 +134,21 @@
                         <tr>
                             <th class="mdl-data-table__cell--non-numeric">Nombre</th>
                             <th class="mdl-data-table__cell--non-numeric">Código</th>
-                            <th class="mdl-data-table__cell--non-numeric">Cantidad de Estudiantes</th>
+
                             
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Optimización 1</td>
+                        <% mat.forEach(function(materias)  { %>
+                            <td class="mdl-data-table__cell--non-numeric"><%= mat.NombreMateria %></td>
                             <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--mint">FPTGT04</span>
+                                <span class="label label--mini background-color--mint"><%= mat.CodigoMat %></span>
                             </td>
-                            <td class="mdl-data-table__cell--non-numeric">30</td>
-                            
+
+                         <% }); %>   
                         </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Sistemas de Información</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--baby-blue">FPTSP04</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">21</td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Administración de Bases de Datos</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--primary">FPTSP02</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">20</td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Estadística para Ingenieros</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--secondary">BPTMI20</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">25</td>
-                            
-                        </tr>
+                        
                         </tbody>
                     </table>
                 </div>

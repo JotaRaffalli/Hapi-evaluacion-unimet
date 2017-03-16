@@ -42,7 +42,7 @@
             <div class="mdl-layout-spacer"></div>
 
             <div class="avatar-dropdown" id="icon">
-                <span>Luke</span>
+                <span><%= me.Nombre %></span>
                 <img width="45" src="../images/icon.png">
             </div>
 
@@ -52,8 +52,8 @@
                 <li class="mdl-list__item mdl-list__item--two-line">
                     <span class="mdl-list__item-primary-content">
                         <span class="material-icons mdl-list__item-avatar"></span>
-                        <span>Luke</span>
-                        <span class="mdl-list__item-sub-title">Luke@skywalker.com</span>
+                        <span><%= me.Nombre %></span>
+                        <span class="mdl-list__item-sub-title"><%= me.Correo %></span>
                     </span>
                 </li>
                 <li class="list__item--border-top"></li>
@@ -140,42 +140,17 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <% mat.forEach(function(materias)  { %>
                         <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Optimización 1</td>
+                            <td class="mdl-data-table__cell--non-numeric"><%= mat.NombreMateria %></td>
                             <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--mint">FPTGT04</span>
+                                <span class="label label--mini background-color--mint"><%= mat.CodigoMat %></span>
                             </td>
-                            <td class="mdl-data-table__cell--non-numeric">Presencial</td>
-                            <td class="mdl-data-table__cell--non-numeric">Oscar Neira</td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="/modelo-B">Evaluar</a></td>
+                            <td class="mdl-data-table__cell--non-numeric"><%= mat.Modalidad %></td>
+                            <td class="mdl-data-table__cell--non-numeric"><%= mat.NombreProfesor %></td>
+                            <td class="mdl-data-table__cell--non-numeric"><a href="/modelo-B?profesor=<%= mat.NombreProfesor %>">Evaluar</a></td>
                         </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Sistemas de Información</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--baby-blue">FPTSP04</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Presencial</td>
-                            <td class="mdl-data-table__cell--non-numeric">Christian Guillen</td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="/modelo-B">Evaluar</a></td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Administración de Bases de Datos</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--primary">FPTSP02</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Presencial</td>
-                            <td class="mdl-data-table__cell--non-numeric">José Antonio Rodriguez</td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="/modelo-B">Evaluar</a></td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Estadística para Ingenieros</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--secondary">BPTMI20</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Presencial</td>
-                            <td class="mdl-data-table__cell--non-numeric">Thais Leon</td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="/modelo-B">Evaluar</a></td>
-                        </tr>
+                        <% }); %>
                         </tbody>
                     </table>
                 </div>
