@@ -27,7 +27,7 @@ server.register(Vision, function (err) {
     engines: { ejs: require('ejs') },
     path: __dirname+'/views'
   })
-})
+});
 
 //Inicializa las Rutas ------------------------------------------------------------------
 
