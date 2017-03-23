@@ -87,11 +87,9 @@
                       <label class="mdl-textfield__label" for="email">Correo</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-<<<<<<< HEAD
+
                       <input class="mdl-textfield__input" type="password" id="contraseña" name="Clave" ng-model="Login.Clave"/>
-=======
-                      <input class="mdl-textfield__input" type="password" name="Clave" id="contraseña" ng-model="Login.Clave"/>
->>>>>>> 749536e68c7a091e9e7411a1375705d1a8dc229f
+
                       <label class="mdl-textfield__label" for="contraseña">Contraseña</label>
                     </div>
 
@@ -117,40 +115,6 @@
       </main>
     </div>
 
-
- <!-- Angular App-->
-    <script>
-      angular.module('ModuloLogin', []);
-      angular.module('ModuloLogin').controller('ControladorLogin', ['$scope','$http', function($scope, $http){
-
-  $scope.BusquedaUsu = function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
-
-    
-    console.log('entrando a busqueda');
-
-    $http.post('/Login-busqueda', {
-      Correo: $scope.Login.Correo,
-      Clave: $scope.Login.Clave
-    })
-    .then( function onSuccess (res){
-
-<<<<<<< HEAD
-    console.log("exito al enviar", res);  
-=======
-    console.log("exito al enviar");  
->>>>>>> 749536e68c7a091e9e7411a1375705d1a8dc229f
-
-    })
-    .catch(function onError (error){
-      console.log("error");
-    })
-
-
-
-  }
-}]);
-    </script>
-    
 
     <!-- Jquery -->
     <script src="../public/js/dependencies/jquery.min.js"></script>

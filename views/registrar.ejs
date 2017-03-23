@@ -145,30 +145,7 @@
 
 
 
-    <!-- Angular App-->
-    <script>
-      angular.module('ModuloDeRegistro', []);
-      angular.module('ModuloDeRegistro').controller('ControladorDeRegistro', ['$scope','$http', function($scope, $http){
 
-      
-  $scope.submitRegistrar = function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
-
-    console.log("entro");
-
-
-    $http.post('/registrar-nuevo', {
-      nombre: $scope.signupForm.name,
-      apellido: $scope.signupForm.title,
-      email: $scope.signupForm.email,
-      carnet: $scope.signupForm.carnet,
-      cedula: $scope.cedula,
-      clave: $scope.signupForm.password,
-      rol : $scope.rol
-    });
-
-  }
-}]);
-    </script>
 
     <!-- Jquery -->
     <script src="../public/js/dependencies/jquery.min.js"></script>
