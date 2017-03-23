@@ -81,13 +81,13 @@
                 </div>
                 <div class="p-l-20 p-r-20 p-b-20">
                   
-                  <form ng-submit="BusquedaUsu()">
+                  <form method="POST" action="/Login-busqueda">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-                      <input class="mdl-textfield__input" type="email" id="email" ng-model="Login.Correo"/>
+                      <input class="mdl-textfield__input" type="email" id="email" name="Correo" ng-model="Login.Correo"/>
                       <label class="mdl-textfield__label" for="email">Correo</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-                      <input class="mdl-textfield__input" type="password" id="contraseña" ng-model="Login.Clave"/>
+                      <input class="mdl-textfield__input" type="password" id="contraseña" name="Clave" ng-model="Login.Clave"/>
                       <label class="mdl-textfield__label" for="contraseña">Contraseña</label>
                     </div>
 
@@ -128,10 +128,9 @@
       Correo: $scope.Login.Correo,
       Clave: $scope.Login.Clave
     })
-    .then( function onSuccess (){
+    .then( function onSuccess (res){
 
-    console.log("exito al enviar");
-    //window.location = '/registro-exitoso.html';    
+    console.log("exito al enviar", res);  
 
     })
     .catch(function onError (error){
