@@ -85,33 +85,36 @@
               </h2>
             </div>
             <div class="p-l-20 p-r-20 p-b-20">
-              <form ng-submit="submitRegistrar()">
+              
+              
+              <form method="POST" action="/registrar-nuevo" >
+                
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-                  <input ng-model="signupForm.carnet" class="mdl-textfield__input" type="text" id="Carnet" />
+                  <input name="carnet" class="mdl-textfield__input" type="text" id="Carnet" />
                   <label class="mdl-textfield__label" for="Carnet">Carnet</label>
                 </div>
 
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-                  <input ng-model="signupForm.name" class="mdl-textfield__input" type="text" id="Primer Nombre" />
+                  <input name="name" class="mdl-textfield__input" type="text" id="Primer Nombre" />
                   <label class="mdl-textfield__label" for="Primer Nombre">Primer Nombre</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-                  <input ng-model="signupForm.title" class="mdl-textfield__input" type="text" id="Apellido" />
+                  <input name="title" class="mdl-textfield__input" type="text" id="Apellido" />
                   <label class="mdl-textfield__label" for="Apellido">Apellido</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-                  <input ng-model="cedula" class="mdl-textfield__input" type="text" id="Cedula" />
+                  <input name="cedula" class="mdl-textfield__input" type="text" id="Cedula" />
                   <label class="mdl-textfield__label" for="Cedula">Cedula</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-                  <input ng-model="signupForm.password" class="mdl-textfield__input" type="password" id="Contraseña" />
+                  <input name="password" class="mdl-textfield__input" type="password" id="Contraseña" />
                   <label class="mdl-textfield__label" for="Contraseña">Contraseña</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-                  <input ng-model="signupForm.email" class="mdl-textfield__input" type="text" id="Correo" />
+                  <input name="email" class="mdl-textfield__input" type="text" id="Correo" />
                   <label class="mdl-textfield__label" for="Correo">Correo</label>
                 </div>
-                <select ng-model="rol" style="padding-top: 10px; padding-bottom: 20px;" class="browser-default">
+                <select name="rol" style="padding-top: 10px; padding-bottom: 20px;" class="browser-default">
                   <option value="" disabled selected>Selecciona tu rol</option>
                   <option value="1">Estudiante</option>
                   <option value="2">Profesor</option>
@@ -161,18 +164,7 @@
       cedula: $scope.cedula,
       clave: $scope.signupForm.password,
       rol : $scope.rol
-    })
-    .then( function onSuccess (){
-
-    console.log("exito al enviar");
-    window.location = '/registro-exitoso.html';    
-
-    })
-    .catch(function onError (error){
-      console.log("error");
-    })
-
-
+    });
 
   }
 }]);
