@@ -52,8 +52,8 @@
                 <li class="mdl-list__item mdl-list__item--two-line">
                     <span class="mdl-list__item-primary-content">
                         <span class="material-icons mdl-list__item-avatar"></span>
-                        <span>Luke</span>
-                        <span class="mdl-list__item-sub-title">Luke@skywalker.com</span>
+                        <span><%= profesor.Nombre %></span>
+                        <span class="mdl-list__item-sub-title"><%= profesor.Correo %></span>
                     </span>
                 </li>
                 <li class="list__item--border-top"></li>
@@ -141,41 +141,15 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="mdl-data-table__cell--non-numeric">MODELO QUE SE SIRVE</td>
+                            <% materias.forEach(function(mat)  { %>
+                            <td class="mdl-data-table__cell--non-numeric"><%= mat.NombreMateria %></td>
                             <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--baby-blue"> - </span>
+                                <span class="label label--mini background-color--baby-blue"><%= mat.CodigoMat %></span>
                             </td>
-                            <td class="mdl-data-table__cell--non-numeric">-</td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="/evaluar?materia_id=">Evaluar</a></td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="/resultado?materia_id=">Ver Resultado</a></td>
+                            <td class="mdl-data-table__cell--non-numeric"><%= mat.Modalidad %></td>
+                            <td class="mdl-data-table__cell--non-numeric"><a href="/resultado?materia_id=<%= mat.NombreProfesor %>">Ver Resultado</a></td>
                         </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">José Antonio Rodriguez</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--primary"> - </span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Administración de Bases de Datos</td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="#">Evaluar</a></td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="#">Ver Resultado</a></td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Germán Biaggini</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--secondary"> - </span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Algoritmos y Programación</td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="#">Evaluar</a></td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="#">Ver Resultado</a></td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">José Antonio Rodriguez</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--primary"> - </span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Estructuras de Datos</td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="#">Evaluar</a></td>
-                            <td class="mdl-data-table__cell--non-numeric"><a href="#">Ver Resultado</a></td>
-                        </tr>
+                        <% }); %>
                         </tbody>
                     </table>
                 </div>

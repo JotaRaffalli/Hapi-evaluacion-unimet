@@ -15,7 +15,7 @@
     <title>Ingresar Materias</title>
 
     <!-- Roboto -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
     <!-- Favicon -->
     <link rel="icon" href="../public/images/favicon.png" type="images/x-icon">
@@ -129,34 +129,35 @@
                 <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
                 <div class="demo-ribbon mdl-color--green"></div>
                 <main class="demo-main mdl-layout__content">
-                    <h2 align="center" class=" mdl-color-text--white text-shadow">Ingresar materias</h2>
+                    <h2 align="center" class=" mdl-color-text--white text-shadow">Ingresar secciones</h2>
                     <a id="top"></a>
                     <div class="demo-container mdl-grid">
                       <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
                       <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet">
 
                         <div class="mdl-card__title ">
-                          <h2 class="mdl-card__title-text">Materia</h2>
+                          <h2 class="mdl-card__title-text">Crear Seccion de materia: </h2>
                       </div>
                       <div class="p-l-20 p-r-20 p-b-20">
 
-                        <form action="/registrar-materia" method="POST">
-                            <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" name="nombrem">
-                                <label class="mdl-textfield__label" for="nombre">Nombre</label>
-                            </div>
-                            <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" name="codigom">
-                                <label class="mdl-textfield__label" for="codigo">Código</label>
-                            </div>
-                            <div class="mdl-textfield mdl-js-textfield">
-                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="capacidadm">
-                                <label class="mdl-textfield__label" for="capacidad">Capacidad de Alumnos</label>
-                                <span class="mdl-textfield__error">Solo numeros!</span>
-                            </div>
-                            <br>
-
+                        <form action="/crear-seccion" method="POST">
                             
+                            <br>
+                            <select  name="modalidadm" style="padding-top: 10px; padding-bottom: 20px;" class="browser-default">
+                                <option value="" disabled selected>Selecciona la modalidad de la materia</option>
+                                <option value="Presencial">Presencial</option>
+                                <option value="Presencial">Semi-Presencial</option>
+                                <option value="Virtual">Virtual</option>
+                            </select>
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input name="periodo" class="mdl-textfield__input" type="text" id="periodo">
+                                <label class="mdl-textfield__label" for="periodo">Periodo</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input name="profesor" class="mdl-textfield__input" type="text" id="profesor">
+                                <label class="mdl-textfield__label" for="profesor">Profesor</label>
+                            </div>
+                            <input name="materiaId" class="mdl-textfield__input" value="<%= Materia %>" type="hidden" id="materiaId">
                             <div class="m-t-20">
                                 <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green" >Ingresar</button>
                             </div>
@@ -164,6 +165,7 @@
                         </form>
                     </div>
 
+                    <button  type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-color--light-green" ><a href="/" >Finalizar</a> </button>
 
                     </div>
                     </div>
