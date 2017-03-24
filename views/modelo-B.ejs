@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Materia: Sistemas de Información. Proyecto: Control de evaluaciones al docente. 
+    <meta name="description" content="Materia: Sistemas de Información. Proyecto: Control de evaluaciones al docente.
     Versión: 1.00. Integrantes: José Raffalli, Rocco Tarantino, Rafael Concha y Victoria Masiero.">
 
     <!-- Responsive -->
@@ -25,14 +25,14 @@
 
     <!-- Material Design -->
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
-    
+
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
 
 </head>
-<body ng-app="ModuloDeModeloB" ng-controller="ControladorDeModeloB" >
+<body>
 
 <!-- Barra de Navegación -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
@@ -43,7 +43,7 @@
             <div class="mdl-layout-spacer"></div>
 
             <div class="avatar-dropdown" id="icon">
-                <span>Luke</span>
+                <span><%= me.Nombre %></span>
                 <img width="45" src="../images/icon.png">
             </div>
 
@@ -54,7 +54,7 @@
                     <span class="mdl-list__item-primary-content">
                         <span class="material-icons mdl-list__item-avatar"></span>
                         <span>Luke</span>
-                        <span class="mdl-list__item-sub-title">Luke@skywalker.com</span>
+                        <span class="mdl-list__item-sub-title"><%= me.Correo %></span>
                     </span>
                 </li>
                 <li class="list__item--border-top"></li>
@@ -132,12 +132,12 @@
         <section>
 
     <div class="container" align="center">
-        
+
         <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
   <thead>
     <tr>
       <th class="mdl-data-table__cell--non-numeric" align="center">El profesor:</th>
-      <th align="center"> 
+      <th align="center">
         <i class="material-icons">sentiment_very_dissatisfied</i>
         <i class="material-icons">sentiment_dissatisfied</i>
         <i class="material-icons">sentiment_neutral</i>
@@ -163,7 +163,7 @@
     <tr>
       <td class="mdl-data-table__cell--non-numeric">Explica en detalle los objetivos de la materia</td>
       <td>
-          <form action="">
+        <form action="">
         <input type="radio" name="2" value="1">
         <input type="radio" name="2" value="2">
         <input type="radio" name="2" value="3">
@@ -392,7 +392,7 @@
     </div>
     <br>
 <label><b>¡Enviar!</b></label>
-<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" ng-click = "submitEnviar()" ">
+<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="enviar2()" >
   <i class="material-icons">mood</i>
 </button>
 
@@ -408,11 +408,12 @@
 <br>
 </div>
 
-<!-- inject:js -->
+
 
 
 <!-- Función para obtener valor de la opción elegida. -->
 <script>
+// funcion de vicky
 function enviar(){
 var num = 0;
 
@@ -432,58 +433,43 @@ for (var i=0; i<chck.length; i++){
 </script>
 
 
-
+<!-- inject:js -->
 <script src="../public/js/getmdl-select.min.js"></script>
 <script src="../public/js/material.js"></script>
 <script src="../public/js/table.js"></script>
 <script src="../public/js/dependencies/jquery.min.js"></script>
-
+<!-- endinject -->
 <script>
 
+// funcion de jota necesita jquery
+function enviar2()
+{
 
- 
+  var r1  = $('input[name="1"]:checked').val();
+  var r2  = $('input[name="2"]:checked').val();
+  var r3  = $('input[name="3"]:checked').val();
+  var r4  = $('input[name="4"]:checked').val();
+  var r5  = $('input[name="5"]:checked').val();
+  var r6  = $('input[name="6"]:checked').val();
+  var r7  = $('input[name="7"]:checked').val();
+  var r8  = $('input[name="8"]:checked').val();
+  var r9  = $('input[name="9"]:checked').val();
+  var r10 = $('input[name="10"]:checked').val();
+  var r11 = $('input[name="11"]:checked').val();
+  var r12 = $('input[name="12"]:checked').val();
+  var r13 = $('input[name="13"]:checked').val();
+  var r14 = $('input[name="14"]:checked').val();
+  var r15 = $('input[name="15"]:checked').val();
+  var r16 = $('input[name="16"]:checked').val();
+  var r17 = $('input[name="17"]:checked').val();
 
-  angular.module('ModuloDeModeloB', []);
-  angular.module('ModuloDeModeloB').controller('ControladorDeModeloB', ['$scope','$http', function($scope, $http){
+  window.location.href ="/loquemediga_rafa?r1="+r1+"&r2="+r2+"&r3="+r3+"&r4="+r4+"&r5="+r5+"&r6="+r6+"&r7="+r7+"&r8="+r8+"&r9="+r9+"&r10="+r10+"&r11="+r11+"&r12="+r12+"&r13="+r13+"&r14="+r14+"&r15="+r15+"&r16="+r16+"&r17="+r17;
+}
 
-      
-  $scope.submitEnviar = function () { // Esta funcion es la que es llamada una vez se llene el formulario registrar
-
-    console.log("entro");
-
-    var r13 = $('input[name="13"]:checked').val();
-    var r14 = $('input[name="14"]:checked').val();
-    var r15 = $('input[name="15"]:checked').val();
-    var r16 = $('input[name="16"]:checked').val();
-    var r17 = $('input[name="17"]:checked').val();
-
-    $http.post('/enviar-fB', {
-      nombre: $scope.signupForm.name,
-      apellido: $scope.signupForm.title,
-      email: $scope.signupForm.email,
-      carnet: $scope.signupForm.carnet,
-      cedula: $scope.cedula,
-      clave: $scope.signupForm.password,
-      rol : $scope.rol
-    })
-    .then( function onSuccess (){
-
-    console.log("exito al enviar");
-    window.location = '/registro-exitoso.html';    
-
-    })
-    .catch(function onError (error){
-      console.log("error");
-    })
-
-
-
-  }
-}]);
 
 </script>
 
-<!-- endinject -->
+
 
 </body>
 </html>
